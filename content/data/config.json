@@ -34,9 +34,9 @@
             },
             {
                 "type": "Social",
-                "altText": "GitHub",
-                "label": "GitHub",
-                "url": "https://github.com/netlify-templates",
+                "altText": "YouTube",
+                "label": "YouTube",
+                "url": "https://youtube.com/@icemc",
                 "icon": "github"
             }
         ],
