@@ -27,9 +27,9 @@
         "socialLinks": [
             {
                 "type": "Social",
-                "altText": "Twitter",
-                "label": "Twitter",
-                "url": "https://twitter.com/netlify",
+                "altText": "TikTok",
+                "label": "TikTok",
+                "url": "https://tiktok.com/@owner.icemc",
                 "icon": "twitter"
             },
             {
