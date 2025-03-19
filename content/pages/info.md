@@ -211,7 +211,7 @@ sections:
     subtitle: 'Contact:'
     colors: colors-f
     text: |
-      [thisismyemail.@myemail.me](mailto:thisismyemail.@myemail.me)
+      [icemc.bg@gmail.ocm](mailto:icemc.bg@gmail.com)
   - type: DividerSection
     styles:
       self:
