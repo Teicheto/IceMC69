@@ -16,11 +16,8 @@ sections:
     title: >-
       Здравей и добре дошъл в едно уникално майнкрафт сървърче а именно ->> IceMC
     subtitle: >-
-      <div>
-        <p>IP: <strong id="ip-address">play.icemc.online</strong> <button class="btn" onclick="copyIP('play.icemc.online')">Копирай IP</button></p>
-        <p>Port: <strong id="port-address">25565</strong> <button class="btn" onclick="copyPort()">Копирай Порт</button></p>
-        <p>Активни играчи: <span id="players-online">Зареждане...</span></p>
-      </div>
+      IP ->> play.icemc.online
+      Port ->> 
     styles:
       self:
         height: auto
@@ -154,56 +151,4 @@ sections:
           - pl-4
         flexDirection: row
         textAlign: left
-  - type: CustomHTMLSection
-    title: Активни играчи и IP
-    subtitle: >-
-      <p>IP: <strong id="ip-address">play.icemc.online</strong> <button class="btn" onclick="copyIP('play.icemc.online')">Копирай IP</button></p>
-      <p>Port: <strong id="port-address">25565</strong> <button class="btn" onclick="copyPort()">Копирай Порт</button></p>
-      <p>Активни играчи: <span id="players-online">Зареждане...</span></p>
-    styles:
-      self:
-        padding:
-          - pt-24
-          - pb-24
-          - pl-4
-          - pr-4
-    html:
-      content: |
-        <script>
-            // Функция за зареждане на активни играчи
-            async function fetchPlayers() {
-                try {
-                    let response = await fetch(`https://mcapi.us/server/status?ip=play.icemc.online`);
-                    let data = await response.json();
-                    if (data.online) {
-                        document.getElementById("players-online").innerText = data.players.now;
-                    } else {
-                        document.getElementById("players-online").innerText = "Сървърът е офлайн";
-                    }
-                } catch (error) {
-                    document.getElementById("players-online").innerText = "Грешка при зареждане";
-                }
-            }
-            fetchPlayers();
-
-            // Функция за копиране на IP адрес
-            function copyIP(ip) {
-                navigator.clipboard.writeText(ip).then(() => {
-                    alert("IP адресът е копиран: " + ip);
-                }).catch(err => {
-                    console.error("Грешка при копиране: ", err);
-                });
-            }
-
-            // Функция за копиране на Порт
-            function copyPort() {
-                const port = "25565"; // Порт
-                navigator.clipboard.writeText(port).then(() => {
-                    alert("Портът е копиран: " + port);
-                }).catch(err => {
-                    console.error("Грешка при копиране на порт: ", err);
-                });
-            }
-        </script>
-    actions: []
 ---
